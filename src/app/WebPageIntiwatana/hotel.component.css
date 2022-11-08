@@ -1,0 +1,213 @@
+/* Border */
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: black !important;
+  }
+  /* Font color */
+  input.mat-input-element {
+    color: black !important;
+  }
+
+  .ng-tns-c67-0 .ng-star-inserted{
+    margin-top: 10px !important;
+    margin-left: 5px !important;
+}
+
+#mat-form-field-label-1{
+    margin-top: 10px !important;
+    margin-left: 5px !important;
+}
+.input-1{
+  outline: none;
+  background-color: rgb(238, 238, 238);
+  border: 0;
+  border-radius: 0;
+}
+
+@media  (max-width:760px) {
+  .boton-1{
+  width: 50%;
+  }
+}
+
+.fondo-3 {
+    background-color: rgba(25, 24, 24, 0.87);
+/*    filter: brightness(0.4);*/
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.fondo-mapa {
+  background-image: url("../../assets/image/mapicusco.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+.fondo-servicios {
+  background-image: url("../../assets/image/Hotel-Boutique/lobby.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+.detalles{
+  line-height: 130% !important;
+}
+.fondo-marron{
+  border-radius: 15px 15px 15px 15px;
+  background-color: #30110ddb;
+  background-size: cover;
+}
+.sonbra-1{
+  box-shadow: 0px 0px 5px 1px black; 
+  border-radius: 80px;
+}
+@media  (max-width:1200px) {
+  .sonbra-1{
+    box-shadow: 0px 0px 5px 1px black; 
+    border-radius: 52px;
+  }
+
+}.bg-naranja{
+  background-color: #C44421;
+  background-position: center;
+  background-size: cover;
+}
+.text-boutique{
+  color: #C44421 !important;
+}
+/* estilos de las habitaciones */
+.fs-4 {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+.margen-marron{
+    line-height: 120%;
+    border-radius: 0px 0px 0px 0px;
+    background-size: cover;
+}
+.circulo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: white;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0px auto;
+  padding: 2%
+}
+@media screen and (max-width: 1024px) {
+  .circulo {
+    width: 30px;
+    height: 30px;
+    padding: 1%
+  }
+}
+@media screen and (max-width: 768px) {
+  .circulo {
+    width: 25px;
+    height: 25px;
+    padding: 1%
+  }
+}
+.circulo a{
+    color: #FAA831 !important;
+    font-size: 20px;
+    font-weight: bolder;
+}
+@media screen and (max-width: 768px) {
+  .circulo a{
+    font-size: 8px;
+}
+}
+@media screen and (max-width: 1024px) {
+  .circulo a{
+    font-size: 15px;
+}
+}
+.circulo:hover{
+    background: #FAA831;
+
+}
+.circulo a:hover{
+    color: white !important;
+    cursor: pointer;
+}
+.fs-5{
+  color: #FAA831 !important;
+  font-size: 40px;
+}
+.fs-5:hover{
+  color: #30110D !important;
+}
+
+.borde-derecha{
+    border-right: white 3px solid;
+}
+.borde-izquierda{
+    border-left: white 2px solid;
+}
+.l-naranja{
+    border-left: #30110D 1.5px solid;
+}
+/* final de los bordes de los marcos */
+  .btn-marron {
+    background-color: #30110d79; 
+    color: white;
+    font-weight: bolder;
+    border: 2px solid #30110D;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .btn-marron:hover {
+    background-color: #30110D;
+    color: white;
+  }
+  .line{
+    line-height: 90%;
+  }
+  .pading-carrousel{
+    margin-top: -70%;
+  }
+  .carousel {
+    background: #EEE;
+  }
+  .carousel-cell {
+    width: 28%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+  }
+  
+  .carousel-cell.is-selected {
+    background: #ED2;
+  }
+  
+  /* cell number */
+  .carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+  

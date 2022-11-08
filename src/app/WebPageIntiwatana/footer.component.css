@@ -1,0 +1,9 @@
+.bg-negro{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+.fs-5{
+    font-size: 40px;
+    margin: 5px 10px 5px 10px;
+}

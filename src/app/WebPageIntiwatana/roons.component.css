@@ -1,0 +1,102 @@
+.fs-4 {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+.margen-marron{
+    line-height: 120%;
+    border-radius: 0px 0px 0px 0px;
+    background-size: cover;
+}
+.circulo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: white;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0px auto;
+  padding: 2%
+}
+@media screen and (max-width: 1024px) {
+  .circulo {
+    width: 30px;
+    height: 30px;
+    padding: 1%
+  }
+}
+@media screen and (max-width: 768px) {
+  .circulo {
+    width: 25px;
+    height: 25px;
+    padding: 1%
+  }
+}
+.circulo a{
+    color: black !important;
+    font-size: 20px;
+    font-weight: bolder;
+}
+@media screen and (max-width: 768px) {
+  .circulo a{
+    font-size: 8px;
+}
+}
+@media screen and (max-width: 1024px) {
+  .circulo a{
+    font-size: 15px;
+}
+}
+.circulo:hover{
+    background: black;
+
+}
+.circulo a:hover{
+    color: white !important;
+    cursor: pointer;
+}
+.fs-5{
+  color: #30110D !important;
+  font-size: 40px;
+}
+.fs-5:hover{
+  color: #FAA831 !important;
+}
+
+.borde-derecha{
+    border-right: white 3px solid;
+}
+.borde-izquierda{
+    border-left: white 2px solid;
+}
+/* bordes de los marcos */
+.r-naranja{
+    border-right: #30110D 1.5px solid;
+}
+.l-naranja{
+    border-left: #30110D 1.5px solid;
+}
+/* final de los bordes de los marcos */
+  .btn-marron {
+    background-color: #30110d79; 
+    color: white;
+    font-weight: bolder;
+    border: 2px solid #30110D;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .btn-marron:hover {
+    background-color: #30110D;
+    color: white;
+  }
+
+  

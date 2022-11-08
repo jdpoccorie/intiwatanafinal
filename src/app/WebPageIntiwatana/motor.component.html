@@ -1,0 +1,62 @@
+<div class="w-100">
+  <div class="row mt-5">
+    <div class="col-12 px-0">
+      <form action="#" #form="ngForm" (ngSubmit)="consultaFechas(form)">
+        <div class="row">
+          <div class="col-md-5 col-12 text-center px-md-0 px-5">
+            <mat-form-field appearance="outline" style="display: unset;">
+              <mat-label class="label-1" style="font-weight: bold;">{{ 'motor.checkin' | translate }}</mat-label>
+              <input class="input-1" matInput (dateInput)="actualizarFecha($event)" [min]="minStartDate"
+                [max]="maxStartDate" [matDatepicker]="dp3" [(ngModel)]="filtro.startDate" disabled name="startDate">
+              <mat-datepicker-toggle matSuffix [for]="dp3" class="text-marron" style="font-size: 25px;">
+              </mat-datepicker-toggle>
+              <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="col-md-5 col-12 text-center px-md-0 px-5">
+            <mat-form-field appearance="outline" style="display: unset;">
+              <mat-label class="label-1" style="font-weight: bold;">{{ 'motor.checkout' | translate }}</mat-label>
+              <input class="input-1" matInput [min]="minEndDate" [max]="maxEndDate" [matDatepicker]="dp4"
+                [(ngModel)]="filtro.endDate" disabled name="endDate">
+              <mat-datepicker-toggle matSuffix [for]="dp4" class="text-marron" style="font-size: 25px;">
+              </mat-datepicker-toggle>
+              <mat-datepicker #dp4 disabled="false"></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="col-md-2 col-12 text-center text-center">
+            <button class="mt-md-4 mt-0 mb-md-0 mb-4 btn-marron" type="submit">{{ 'motor.reservar' | translate }}</button>
+          </div>
+        </div>
+      </form>
+      <!-- <form action="#" #form="ngForm" (ngSubmit)="consultaFechas(form)">
+        <div class="row">
+          <div class="col-md-5 col-12 text-center px-md-2 px-5">
+            <mat-form-field appearance="outline" style="display: unset">
+              <mat-label class="text-dark" style="font-weight: bold;">{{ 'motor.checkin' | translate }}</mat-label>
+              <input class="input-1" matInput (dateInput)="actualizarFecha($event)" [min]="minStartDate"
+                [max]="maxStartDate" [matDatepicker]="dp3" [(ngModel)]="filtro.startDate" disabled name="startDate">
+              <mat-datepicker-toggle matSuffix [for]="dp3" class="icono-reserve" style="font-size: 25px;">
+              </mat-datepicker-toggle>
+              <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="col-md-5 col-12 text-center px-md-2 px-5">
+            <mat-form-field appearance="outline" style="display: unset;">
+              <mat-label class="text-dark" style="font-weight: bold;">{{ 'motor.checkout' | translate }}</mat-label>
+              <input class="input-1 bg-marron matInput [min]="minEndDate [max]="maxEndDate" [matDatepicker]="dp4"
+                [(ngModel)]="filtro.endDate" disabled name="endDate">
+              <mat-datepicker-toggle matSuffix [for]="dp4" class="icono-reserve" style="font-size: 25px;">
+              </mat-datepicker-toggle>
+              <mat-datepicker #dp4 disabled="false"></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="col-md-2 col-12 text-center text-center">
+            <button class="mt-md-4 mt-0 mb-md-0 mb-4 btn-marron" type="submit">{{ 'motor.reservar' | translate }}</button>
+          </div>
+        </div>
+      </form> -->
+    </div>
+</div>
+</div>
+ <!-- <section class="no-padding">
+</section>  -->

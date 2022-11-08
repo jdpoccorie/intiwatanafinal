@@ -1,0 +1,31 @@
+.display-5{
+    font-size: 45px;
+    color: black;
+}
+.texto-lateral{
+    color: #30110D;
+    text-align: left;
+    font-size: 40px;
+    letter-spacing: 0;
+  }
+  .boton-1{
+    color: white;
+    background-color:#30110D;
+    border-radius: 5px;
+    border: 2px #dedede;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 10px;
+    align-items: center;
+  }
+  .boton-1:hover{
+    color: #30110D;
+    background-color:white;
+    border: 2px solid #30110D;
+    transition: 0.3;
+  }
+  @media  (max-width:760px) {
+    .boton-1{
+    width: 100%;
+    }
+  }

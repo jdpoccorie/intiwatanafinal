@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HOTEL INTIWATANA</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="assets/css/HotelSuizo/plugins.css" rel="stylesheet">
+    <link href="assets/css/HotelSuizo/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/HotelSuizo/hotel-style.css" media="screen" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/vendors/linericon/style.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+<!-- Body Inner -->
+<div class="body-inner">
+    <app-root></app-root>
+</div>
+<!-- end: Body Inner -->
+<script src="https://static-content.vnforapps.com/elements/v1/payform.min.js"></script>
+<!-- Optional JavaScript -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="assets/js/mail-script.js"></script>
+<script src="assets/vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
+<script src="assets/vendors/nice-select/js/jquery.nice-select.js"></script>
+<script src="assets/js/mail-script.js"></script>
+<script src="assets/js/stellar.js"></script>
+<script src="assets/vendors/lightbox/simpleLightbox.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  $(document).ready(function(){
+      $('[data-toggle="popover"]').popover();
+  });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+  window.addEventListener('scroll', function() {
+
+    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+      if (window.scrollY > 50 && width > 1024) {
+        document.getElementById('mainMenu').classList.add('fixed-top-suizo');
+        document.getElementById('logoD').classList.add('fixed-top-suizo');
+        document.getElementById('panelMenu').classList.add('fixed-top-suizo-panel-visible');
+
+        document.getElementById('homeMenu').classList.add("black-fore-color");
+        document.getElementById('aboutusMenu').classList.add('black-fore-color');
+        document.getElementById('roomsMenu').classList.add('black-fore-color');
+        document.getElementById('galleryMenu').classList.add('black-fore-color');
+        document.getElementById('contactMenu').classList.add('black-fore-color');
+        document.getElementById('logoD').classList.add('black-fore-color');
+
+      } else {
+        document.getElementById('mainMenu').classList.remove('fixed-top-suizo');
+        document.getElementById('logoD').classList.remove('fixed-top-suizo');
+        document.getElementById('panelMenu').classList.remove('fixed-top-suizo-panel-visible');
+        document.getElementById('homeMenu').classList.remove('black-fore-color');
+        document.getElementById('aboutusMenu').classList.remove('black-fore-color');
+        document.getElementById('roomsMenu').classList.remove('black-fore-color');
+        document.getElementById('galleryMenu').classList.remove('black-fore-color');
+        document.getElementById('contactMenu').classList.remove('black-fore-color');
+        document.getElementById('logoD').classList.remove('black-fore-color');
+      }
+  });
+});
+</script>
+</body>
+</html>

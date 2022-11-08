@@ -1,0 +1,123 @@
+<div style="position: absolute; width: 100%;">
+    <!-- Topbar -->
+    <div id="topbar" class="border" style="border-color: #faa831 !important;">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 col-12 px-0">
+                  <ul class="top-menu text-center">
+                      <li><a class="font-weight-bold text-marron text-center" target="_blank" href="https://wa.me/51985868713/?text=Hola%20bienvenido%20a Cusco">Phone: +51 985 868 713</a></li>
+                      <li><a class="font-weight-bold text-marron" href="#">Email: reservas@intiwatana.pe</a></li>
+                  </ul>
+              </div>
+              <div class="col-md-6 col-12">
+                  <div class="social-icons social-icons-colored-hover text-center">
+                      <ul>
+                          <li class="social-facebook"><a href="https://www.facebook.com/Intiwatana.pe" target="_blank"><i class="fab fa-facebook-f text-marron"></i></a></li>
+                          <li class="social-twitter"><a href="#" target="_blank"><i class="fab fa-twitter text-marron"></i></a></li>
+                          <li class="social-google"><a href="#" target="_blank"><i class="fab fa-google-plus-g text-marron"></i></a></li>
+                          <li class="social-pinterest"><a href="#" target="_blank"><i class="fab fa-pinterest text-marron"></i></a></li>
+                          <li class="social-vimeo"><a href="#" target="_blank"><i class="fab fa-vimeo text-marron"></i></a></li>
+                          <li class="social-linkedin"><a href="#" target="_blank"><i class="fab fa-linkedin text-marron"></i></a></li>
+                          <li class="social-dribbble"><a href="#" target="_blank"><i class="fab fa-dribbble text-marron"></i></a></li>
+                          <li class="social-youtube"><a href="https://www.youtube.com/channel/UCJzJhRSIZGLHRME-UyShs3Q" target="_blank"><i class="fab fa-youtube text-marron"></i></a></li>
+                          <li class="social-rss"><a href="#" target="_blank"><i class="fa fa-rss text-marron"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end: Topbar -->
+  <!-- Header -->
+  <header id="header" data-transparent="true" class="dark submenu-light" >
+      <div class="header-inner">
+          <div class="container my-lg-4 my-1">
+              <nav class="navbar navbar-expand-lg navbar-light d-lg-none d-block text-center pb-lg-3 pb-0">
+                <ul class="list-unstyled">
+                  <li class="media d-flex align-items-center">
+                    <a class="navbar-brand" style="margin-top: -25px;" routerLink="/home"><img src="assets/image/hotelIntiWatana/logo.png" class="img-fluid" alt=""></a>
+                    <div class="media-body">
+                      <button class="navbar-toggler text-dark px-lg-5 px-1 rojo" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-plus text-white"></i>
+                    </button>
+                    </div>
+                  </li>
+                </ul>
+                  <!-- <a class="navbar-brand" routerLink="/home"><img src="assets/image/hotelIntiWatana/logo.png" width="100%" alt=""></a>
+                  <button class="navbar-toggler text-dark px-lg-5 px-1 rojo" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                      <i class="fas fa-plus text-white"></i>
+                  </button> -->
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav rojo">
+                      <a class="nav-item nav-link active text-dark font-weight-bold" routerLink="/home">{{ 'menu.inicio' | translate }} <span class="sr-only">(current)</span></a>
+                      <a class="nav-item nav-link text-dark font-weight-bold" routerLink="/hotel">{{ 'menu.hotel_cusco' | translate }}</a>
+                      <a class="nav-item nav-link text-dark font-weight-bold" routerLink="/hotel">{{ 'menu.hotel_mapi' | translate }}</a>
+                      <a class="nav-item nav-link text-dark font-weight-bold" routerLink="/aboutus">{{ 'menu.quienes_somos' | translate }}</a>
+                      <a class="nav-item nav-link text-dark font-weight-bold" routerLink="/contact">{{ 'menu.contacto' | translate }}</a>
+                    </div>
+                  </div>
+                </nav>
+              <div class="d-lg-block d-none py-5" id="panelMenu" style="height: 130px; width: 100%; position: fixed; top: 0%; left: 0%; background-color: #30110dcb; box-shadow: 0 12px 6px rgb(0 0 0 / 6%);visibility: hidden;"></div>
+              <!--Logo-->
+              <div class="d-lg-block d-none" id="logo"><a href="index.html"><span id="logoD" class="logo-dark"><img src="assets/image/hotelIntiWatana/logo.png" class="img-fluid" alt=""></span></a></div>
+              <!--End: Logo-->
+              <div class="header-extras d-lg-block d-none">
+                  <ul>
+                      <li> <a id="btn-search" href="#"> <i class="icon-search"></i></a> </li>
+                      <li>
+                          <div class="p-dropdown">
+                              <a href="#">
+                                  <i class="icon-globe"></i>
+                                  <span>{{ 'home.idioma' | translate }}</span>
+                              </a>
+                              <ul class="p-dropdown-content">
+                                  <li><a [routerLink]="" (click)="setLanguage('es')">Spanish</a></li>
+                                  <li><a [routerLink]="" (click)="setLanguage('en')">English</a></li>
+                              </ul>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+              <div class="header-extras d-lg-none d-block" style="margin-top: -3%; font-stretch: 800;">
+                  <ul>
+                      <li> <a id="btn-search" href="#"> <i class="icon-search"></i></a></li>
+                      <li>
+                          <div class="p-dropdown">
+                              <a href="#">
+                                  <i class="icon-globe"></i>
+                                  <span>{{ 'home.idioma' | translate }}</span>
+                              </a>
+                              <ul class="p-dropdown-content">
+                                  <li><a [routerLink]="" (click)="setLanguage('es')">Spanish</a></li>
+                                  <li><a [routerLink]="" (click)="setLanguage('en')">English</a></li>
+                              </ul>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+              <!--end: Header Extras-->
+              <!--Navigation Resposnive Trigger-->
+              <!-- <div id="mainMenu-trigger">
+                  <a class="lines-button x"><span class="lines"></span></a>
+              </div> -->
+              <!--end: Navigation Resposnive Trigger-->
+              <!--Navigation-->
+              <div id="mainMenu">
+                  <div class="container">
+                      <nav>
+                          <ul class="lista">
+                              <li><a id="homeMenu" class="sombra-t" routerLink="/home">{{ 'menu.inicio' | translate }}</a></li>
+                              <li><a id="hotelMenu" class="sombra-t" routerLink="/hotel">{{ 'menu.hotel_cusco' | translate }}</a></li>
+                              <!-- <li><a id="hotelMenu" routerLink="/hotel" (click)="movePage(target)">BOUTIQUE</a></li> -->
+                              <li><a id="aboutusMenu" class="sombra-t" routerLink="/machupicchu" >{{ 'menu.hotel_mapi' | translate }}</a></li>
+                              <li><a id="aboutusMenu" class="sombra-t" routerLink="/aboutus" >{{ 'menu.quienes_somos' | translate }}</a></li>
+                              <li><a id="contactMenu" class="sombra-t" routerLink="/contact">{{ 'menu.contacto' | translate }}</a></li>
+                          </ul>
+                      </nav>
+                  </div>
+              </div>
+              <!--end: Navigation-->
+          </div>
+      </div>
+  </header>
+</div>

@@ -1,0 +1,25 @@
+/* Border */
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: white;
+  }
+  /* Font color */
+  input.mat-input-element {
+    color: white;
+  }
+  .btn-marron {
+    background-color: transparent; 
+    color: #9b3c00;
+    font-weight: bolder;
+    border: 2px solid #9b3c00;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .btn-marron:hover {
+    background-color: #9b3c00;
+    color: white;
+  }

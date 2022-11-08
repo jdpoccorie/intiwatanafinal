@@ -1,0 +1,148 @@
+<header-pages></header-pages>
+
+<div class="container">
+    <article class="card">
+        <header class="card-header" style="background-color: rgba(0, 0, 0, 0.03);"> {{ 'motor.infoorden' | translate }} </header>
+        
+        <mat-spinner style="margin:0 auto;" mode="indeterminate" *ngIf="showLoadingSpinner == true"></mat-spinner>
+        
+        <div class="card-body" *ngIf="showLoadingSpinner == false">
+
+            <article class="card card-outline-secondary">
+                <header class="card-header" style="background-color: rgba(0, 0, 0, 0.03);"> {{ 'motor.detalleorden' | translate }} </header>
+
+                <div class="card-body">
+
+                    <div class="row">
+                        <h2 style="font-size: large;">{{ 'motor.codigoreserva' | translate }} {{respuestaServer.CodigoReserva}}</h2>
+                    </div>
+
+                    <div class="row">
+                        <article class="col-12 card card-outline-secondary">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4"> <strong>{{ 'motor.fechasolicitud' | translate }}</strong> <br> {{respuestaServer.FechaPago | date:'yyyy-MM-dd HH:mm' }} </div>
+                                    <div class="col-md-4"> <strong>{{ 'motor.montototal' | translate }}</strong> <br> {{respuestaServer.Moneda}} {{respuestaServer.MontoPagado}} </div>
+                                    <div class="col-md-4" > <strong>{{ 'motor.formapago' | translate }}</strong> <br> {{ 'motor.pagotarjeta' | translate }} </div>
+                                    <div class="col-md-4" > <strong>{{ 'motor.tipotarjeta' | translate }} </strong> <br> {{respuestaServer.TipoTarjeta}}  </div>
+                                    <div class="col-md-4" > <strong>{{ 'motor.nrotarjeta' | translate }} </strong> <br> {{respuestaServer.NroTarjeta}}  </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6"> 
+                                        <strong>{{ 'motor.checkin' | translate }}</strong> <br> <strong class="text-primary">{{respuestaServer.FechaCheckIn | date:'yyyy-MM-dd'}}</strong> 
+                                    </div>
+                                    <div class="col-md-6"> 
+                                        <strong>{{ 'motor.checkout' | translate }}</strong> <br> <strong class="text-primary">{{respuestaServer.FechaCheckOut | date:'yyyy-MM-dd'}}</strong> <br>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6"> 
+                                        <strong>{{ 'motor.estadopago' | translate }}</strong> <br> <strong class="text-danger">{{ 'motor.pagoconfirmado' | translate }}</strong> 
+                                    </div>
+                                    <div class="col-md-6"> 
+                                        <strong>{{ 'motor.estadopago' | translate }}</strong> <br> <strong class="text-success">{{ 'motor.pagorealizado' | translate }}</strong> <br>
+                                        <strong>{{ 'motor.idtransaccion' | translate }}</strong> <br> <strong class="text-success">{{respuestaServer.IdTransaccion}}</strong><br>
+                                        <strong>{{ 'motor.codreferencia' | translate }}</strong> <br> <strong class="text-success">{{respuestaServer.CodigoRef}}</strong>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </article>
+                        <p></p>
+                    </div>
+
+                    <div class="row table-responsive" style="margin-top: 20px; margin-left: 5px;">
+                            <div class="row card mb-3" *ngFor="let item of listaHabitacionesSeleccionadas" style="margin-right: 5px;">
+                              <div class="row no-gutters">
+                                <div class="col-md-4">
+                                  <img [src]="'data:image/jpg;base64,' + item.Base64ImageBanner1" alt="First slide" style="width: 250px; height: 160px;" class="img-fluid" >
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h4 class="card-title">{{item.TipoHabitacion}}</h4>
+                                    <p class="card-text">{{item.Observaciones}}</p>
+                                    <p class="card-text">{{ 'motor.noches' | translate }} : {{item.nroNoches}}</p>
+                                    <p class="card-text"><small class="text-muted">{{ 'motor.preciohab' | translate }} : {{moneda | monedaFormato}} {{item.PrecioSubTotal}}</small></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                </div>
+            </article>
+            <hr>
+
+            <article class="card card-outline-secondary">
+                <header class="card-header" style="background-color: rgba(0, 0, 0, 0.03);"> {{ 'motor.datoscontacto' | translate }} </header>
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4"> <strong>{{ 'motor.nombres' | translate }}:</strong> <br>{{checkOutModel.nombres}} </div>
+                        <div class="col-md-4"> <strong>{{ 'motor.apellidos' | translate }}:</strong> <br> {{checkOutModel.apellidos}} </div>
+                        <div class="col-md-4"> <strong>{{ 'motor.telefonocont' | translate }}:</strong> <br> {{checkOutModel.telefonoContacto}} </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"> <strong>{{ 'motor.pais' | translate }}:</strong> <br>{{checkOutModel.pais}} </div>
+                        <div class="col-md-4"> <strong>{{ 'motor.ciudad' | translate }}:</strong> <br> {{checkOutModel.ciudad}} </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"> <strong>{{ 'motor.direccion' | translate }}:</strong> <br>{{checkOutModel.direccionExacta}} </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"> <strong>{{ 'motor.email' | translate }}:</strong> <br>{{checkOutModel.correoElectronico}} </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"> <strong>* SE LE ENVIO UN CORREO CON LA INFORMACION DE LA RESERVA</strong> </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6"> 
+                        
+                            <p>Pol&iacute;ticas Check-in Check-in: de 12:00 a 05:30 Edad m&iacute;nima para hacer el check-in: 18 a&ntilde;os Check-Out Check-out antes de las 09:00 Instrucciones especiales de check-in El personal de recepci&oacute;n recibir&aacute; a los hu&eacute;spedes al momento de su llegada. Formas de acceso Personal de recepci&oacute;n Mascotas No se aceptan mascotas ni animales de servicio Ni&ntilde;os y camas adicionales Los ni&ntilde;os son bienvenidos. No hay camas extra disponibles. No hay cunas disponibles. Formas de pago American ExpressDiners ClubDiscoverJCB InternationalMastercardVisa Informaci&oacute;n importante Cargos Deber&aacute;s pagar los siguientes cargos en el establecimiento:</p>
+
+                            <p>Es posible que los residentes de Per&uacute;, independientemente de la duraci&oacute;n de su estancia, as&iacute; como los no residentes que permanezcan en el pa&iacute;s al menos 60 d&iacute;as consecutivos, deban pagar el impuesto nacional sobre ventas (18%) en el check-out. Los extranjeros que presenten un pasaporte v&aacute;lido y la Tarjeta Andina de Migraci&oacute;n en el check-in est&aacute;n exentos de este impuesto. Si comparten habitaci&oacute;n una persona que deba pagar el impuesto y otra exenta, este se podr&aacute; aplicar a toda la habitaci&oacute;n. Incluimos todos los cargos de los cuales nos inform&oacute; el establecimiento.</p>
+
+                            <p>Informaci&oacute;n importante Podr&iacute;a aplicarse un cargo por persona extra, que var&iacute;a seg&uacute;n la pol&iacute;tica del establecimiento Es posible que debas presentar una identificaci&oacute;n oficial con fotograf&iacute;a y una tarjeta de cr&eacute;dito, una tarjeta de d&eacute;bito o hacer un dep&oacute;sito en efectivo en el check-in para cubrir cualquier gasto imprevisto Las solicitudes especiales no se pueden garantizar. Est&aacute;n sujetas a disponibilidad al momento del check-in y pueden tener un costo extra Este establecimiento no ofrece estacionamiento en sus instalaciones Este establecimiento acepta Visa, Mastercard, American Express, Discover, Diners Club, JCB International, Union Pay, tarjetas de cr&eacute;dito y efectivo Avisos importantes Este establecimiento no acepta mascotas ni animales de servicio.</p>
+                        
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+            <hr>
+
+            <article class="card card-outline-secondary">
+                <div>
+                    <div class="comment-wrapper">
+                        <div class="card panel-info" *ngIf="showLoadingSpinnerEnviarMensaje == false">
+                            <div class="card-header">
+                                {{ 'motor.solicitudesadicionales' | translate }}
+                            </div>
+                            <div class="card-body">
+                                <textarea class="form-control" placeholder="escriba un comentario..." rows="3" [(ngModel)] = "newMessage"></textarea>
+                                <br>
+                                <button type="button" class="btn btn-info pull-right" (click)="enviarNuevoMensaje()">{{ 'motor.enviarmensaje' | translate }}</button>
+                                <div class="clearfix"></div>
+                                <hr>
+                            </div>
+                        </div>
+
+                        <mat-spinner style="margin:0 auto;" mode="indeterminate" *ngIf="showLoadingSpinnerEnviarMensaje == true"></mat-spinner>
+                    </div>
+
+                </div>
+            </article>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-sm-12  col-md-6">
+                    <a href="/" class="btn btn-success" data-abc="true"> <i class="fa fa-chevron-left"></i> {{ 'motor.volverordenes' | translate }} </a>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>

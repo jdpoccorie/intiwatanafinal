@@ -1,0 +1,100 @@
+.video-2{
+	position: relative;
+	max-width: auto;
+	width: 100%;
+    z-index: -1;
+	height: auto;
+}
+/* media queries (personalizarlo a su antojo)*/
+@media (max-width: 1200px) {
+    .video-2{
+        width: 150%;
+    }
+}
+@media(max-width: 900px){
+	.video-2{
+		width: 250%;
+	}
+}
+@media(max-width: 650px){
+	.video-2{
+		width: 280%;
+	}
+}
+@media(max-width: 480px){
+	.video-2{ 
+		width: 500%;
+	}
+}
+.fondo-valores {
+  background-image: url("../../assets/image/intiwata.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+.acortado{
+    overflow: hidden;
+	-webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    margin: auto;
+}
+.acortado:hover{
+	text-overflow: initial;
+    white-space: initial;
+    overflow: visible;
+    cursor: pointer;
+}
+.texto-lateral{
+    color: #9b3c00;
+    text-align: left;
+    font-family: "Titulo";
+    font-size: 55px;
+    letter-spacing: 3px;
+  }
+  .btn-cafe {
+    background-color: #30110D; 
+    color: #ffffff;
+    font-weight: bolder;
+    /* border: 2px solid #9b3c00; */
+    padding: 5px 20px;
+    text-align: center;
+    border-radius: 7px;
+    font-size: 12px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .btn-cafe:hover {
+    background-color: #ffffff;
+    font-weight: bold;
+    color: #30110D;
+  }
+  .trans-negro{
+    background-color: #070304a1;
+}
+.trans-blanco{
+    background-color: #DEDEDEa1;
+}
+.widget-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: black;
+    border-radius: 8px;
+  }
+  
+  .widget {
+    width: 15%;
+    height: 50px;
+    flex: auto;
+    margin: 0.5rem;
+    background: white;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 4px;
+  }

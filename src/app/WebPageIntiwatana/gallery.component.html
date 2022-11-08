@@ -1,0 +1,139 @@
+<header-intiwatana-webpage  (dataEvent)='setLanguage($event)'></header-intiwatana-webpage>
+<carousel-intiwatana-webpage></carousel-intiwatana-webpage>
+<section>
+    <div class="container">
+        <h2 class="text-medium text-center text-naranja m-t-0">La Magia del Cusco</h2>
+        <p class="text-justify">
+            <small class="font-weight-bold text-marron">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius voluptas officia consequatur aperiam ullam dolores atque magni ea assumenda architecto suscipit sint, dicta earum cumque perferendis blanditiis vel provident harum quasi similique consequuntur dolorem delectus error possimus? Sunt, non veniam?</small>
+        </p>
+    </div>
+    <div class="container text-center my-5">
+        <h3 class="mb-0 font-weight-bold text-marron">{{ 'galeria.subtitle' | translate }}</h3>
+        <p class="font-weight-bold mb-0 text-naranja">{{ 'galeria.text1' | translate }}</p>
+        <h1 class="font-weight-bold text-naranja">"HOTEL INTIWATANA"</h1>
+    </div>
+    <div class="card-columns itemset" [ngsRevealSet]="{ reset:false}" [ngsSelector]="'.item'">
+        <div class="card item item1">
+          <img class="card-img-top" src="assets/image/hotelIntiWatana/G1.jpg" alt="Card image cap">
+          <div class="card-body p-2">
+            <h5 class="card-title text-center text-naranja">{{ 'home.conocenos' | translate }}</h5>
+            <p class="card-text text-justify text-marron font-weight-bold"><small>{{ 'home.sub_title_pie' | translate }}</small></p>
+          </div>
+        </div>
+        <div class="card item item2">
+            <img class="card-img-top" src="assets/image/hotelIntiWatana/baño-1.jpg" alt="Card image cap">
+        </div>
+        <div class="card bg-marron text-center p-3 item item5">
+          <blockquote class=" mb-0">
+            <p class="text-naranja">{{ 'galeria.card_title_1' | translate }}</p>
+            <footer class="blockquote-footer">
+              <small class="text-white font-weight-light">
+                <cite title="Source Title text-white">{{ 'galeria.card_desc_1_1' | translate }}</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div>
+        <!-- <div class="card p-3 item item3">
+          <blockquote class="bg-marron mb-0 card-body">
+            <p class="text-naranja">{{ 'galeria.card_title_1' | translate }}</p>
+            <footer class="blockquote-footer">
+              <small class="text-white">
+                {{ 'galeria.card_desc_1' | translate }} <cite title="Source Title">{{ 'galeria.card_desc_1_1' | translate }}</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div> -->
+        <div class="card item item4">
+            <img class="card-img-top" src="assets/image/hotelIntiWatana/G3.jpg" alt="Card image cap">
+          <div class="card-body p-2">
+            <h5 class="card-title text-center text-naranja">"HOTEL INTIWATANA"</h5>
+          </div>
+        </div>
+        <div class="card bg-marron text-center p-3 item item5">
+          <blockquote class=" mb-0">
+            <p class="text-naranja">{{ 'galeria.card_title_2' | translate }}</p>
+            <footer class="blockquote-footer">
+              <small class="text-white font-weight-light">
+                <cite title="Source Title text-white">{{ 'galeria.card_desc_2' | translate }}</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="card item item6">
+            <img class="card-img-top" src="assets/image/hotelIntiWatana/G4.jpg" alt="Card image cap">
+        </div>
+        <div class="card text-center item item7">
+          <div class="card-body">
+            <h5 class="card-title text-naranja">"HOTEL INTIWATANA"</h5>
+            <p class="card-text"></p>
+            <p class="card-text"><small class="text-muted"></small></p>
+          </div>
+        </div>
+        <div class="card item item8">
+            <img class="card-img-top" src="assets/image/hotelIntiWatana/G5.jpg" alt="Card image cap">
+        </div>
+        <div class="card bg-marron text-center p-3 item item9">
+          <blockquote class=" mb-0">
+            <p class="text-naranja">¡Welcome to Cusco, let us know about you...!</p>
+            <footer class="blockquote-footer">
+              <small class="text-white font-weight-light">
+                <cite title="Source Title text-white font-weight-bold">Jhon Wick</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="card item item10">
+          <img class="card-img-top" src="assets/image/hotelIntiWatana/G2.jpg" alt="Card image cap">
+          <div class="card-body p-2">
+            <h5 class="card-title text-center text-naranja">{{ 'home.conocenos' | translate }}</h5>
+            <p class="card-text text-justify text-marron font-weight-bold"><small>{{ 'home.sub_title_pie' | translate }}</small></p>
+          </div>
+        </div>
+        <div class="card item item11">
+            <img class="card-img-top" src="assets/image/hotelIntiWatana/G6.jpg" alt="Card image cap">
+        </div>
+        <div class="card bg-marron text-center p-3 item item12">
+          <blockquote class=" mb-0">
+            <p class="text-naranja">Very clean and Comfortable Bathrooms</p>
+            <footer class="blockquote-footer">
+              <small class="text-white font-weight-light">
+                <cite title="Source Title text-white font-weight-bold">Jhon Wick</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="card item item13">
+          <img class="card-img-top" src="assets/image/hotelIntiWatana/baño-2.jpg" alt="Card image cap">
+      </div>
+      </div>
+
+      <!-- fotos de las piedras -->
+      <div class="row my-0 d-flex align-items-stretch">
+          <div class="col-12 text-center">
+              <h1 class="text-marron font-weight-light">{{ 'galeria.title2' | translate }}</h1>
+              <div class="container p-5">
+                <img src="assets/image/hotelIntiWatana/intiwatana.jpg" class="img-fluid border border-dark" alt="">
+              </div>
+          </div>
+          <!-- <div class="col-lg-6 col-12">
+            <img src="assets/image/gallery/piedra-1.jpg" class="img-fluid" alt="">
+        </div>
+          <div class="col-lg-6 col-12 mt-lg-0 mt-4">
+            <img src="assets/image/gallery/piedra-3.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="w-100 my-2"></div>
+        <div class="col-lg-8 col-12">
+            <img src="assets/image/gallery/cusco-1.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-4 col-12 mt-lg-0 mt-4">
+            <img src="assets/image/gallery/cusco-2.jpg" class="img-fluid" style="height: 72% !important;" alt="">
+        </div> -->
+        <!-- <div class="col-8">
+            <img src="assets/image/gallery/cusco-1.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-4">
+            <img src="assets/image/gallery/cusco-2.jpg" class="img-fluid" style="height: 72% !important;" alt="">
+        </div> -->
+      </div>
+</section>
+<footer-intiwatana-webpage></footer-intiwatana-webpage>

@@ -1,0 +1,86 @@
+.maintxt {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 100%;
+  }
+
+  /* Centered text */
+.centeredtext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+  }
+
+  a:not(.btn):not(.badge):hover, a:not(.btn):not(.badge):focus, a:not(.btn):not(.badge):active{
+    color: white !important;
+  }
+
+  @media only screen and (min-width: 0px) and (max-width: 1024px) {
+    .responsiveapp {
+      height: 600px !important;
+    }
+  }
+  
+    @media only screen and (min-width: 1025px) and (max-width: 1500px) {
+      .responsiveapp {
+        height: 700px !important;
+      }
+    }
+
+    @media only screen and (min-width: 1500px) and (max-width: 2000px) {
+      .responsiveapp {
+        height: 800px !important;
+      }
+    }  
+
+.fixed-top-suizo{
+  position: fixed;
+    top: 0;
+    right: 0;
+    left: 50px;
+    z-index: 1030;  
+}
+.sombra-t{
+  font-size: 12px !important;
+  text-shadow: 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black;
+}
+.fixed-top-suizo-panel-visible{
+  visibility: visible !important;
+}
+.text-negro{
+  color: black !important;
+  font-weight: bolder !important;
+  font-size: 12px !important;
+}
+#mainMenu nav > ul > li > a:hover {
+color: #faa831 !important;
+font-weight: bold;
+background-color: rgb(255, 255, 255);
+transition: 0.3s;
+}
+.rojo >i:hover{
+  color: #faa831 !important;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255);
+  padding: 2px;
+}
+.rojo >a:hover{
+  color: #faa831 !important;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+.rojo >i:active{
+  color: #faa831 !important;
+  font-weight: bold;
+  background-color: white;
+  padding: 2px;
+}
+.lista{
+  margin-top: 25px !important;
+  font-weight: 900 !important;
+}
