@@ -86,6 +86,7 @@ import { RoomsIntiWatanaWebPageComponent } from './WebPageIntiwatana/roons.compo
 import { ContactIntiWebPageComponent } from './WebPageIntiwatana/contact.component';
 import { GalleryIntiWebPageComponent } from './WebPageIntiwatana/gallery.component';
 import { AboutusIntiWebPageComponent} from './WebPageIntiwatana/aboutus.component';
+import { FormContactComponent } from './WebPageIntiwatana/form-contact.component';
 
 
 @NgModule({
@@ -93,7 +94,7 @@ import { AboutusIntiWebPageComponent} from './WebPageIntiwatana/aboutus.componen
     AppComponent, HeaderPagesComponent, HeaderComponent, HabitacionesComponent, RoomsIntiWatanaWebPageComponent, AboutusIntiWebPageComponent, MachupicchuIntiWatanaWebPageComponent,
     TotalSeleccionHabPipe, TotalHabitacionesPipe, TotalHuepedesHabPipe, MonedaFormatoPipe, GalleryIntiWebPageComponent, HotelIntiWatanaWebPageComponent, Carousel2IntiWatanaWebPageComponent,
     CheckOutComponent, ProcessDialogComponent, DetalleOrdenComponent, DisponibilidadDialogComponent, ContactIntiWebPageComponent, CarouselIntiWatanaWebPageComponent,
-    HeaderIntiWatanaWebPageComponent, HomeIntiWatanaWebPageComponent, MotorIntiWatanaWebPageComponent, FooterIntiWatanaWebPageComponent, Carousel1IntiWatanaWebPageComponent
+    HeaderIntiWatanaWebPageComponent, HomeIntiWatanaWebPageComponent, MotorIntiWatanaWebPageComponent, FooterIntiWatanaWebPageComponent, Carousel1IntiWatanaWebPageComponent, FormContactComponent
   ],
   imports: [
     BrowserModule,
