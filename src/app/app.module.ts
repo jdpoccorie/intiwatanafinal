@@ -21,7 +21,9 @@ import { CheckOutComponent } from './CheckOut/checkout.component';
 import { CheckOutRepository } from './DataAccess/checkout.repository';
 import { MatDialog } from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
+
 import {A11yModule} from '@angular/cdk/a11y';
+
 import {ClipboardModule} from '@angular/cdk/clipboard';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {PortalModule} from '@angular/cdk/portal';
@@ -66,6 +68,7 @@ import {NgsRevealModule} from 'ngx-scrollreveal';
 // import ngx-translate and the http loader
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
 import {HttpClient} from '@angular/common/http';
 import { HeaderPagesComponent } from './header-pages.component';
 import { DatePipe } from '@angular/common';
@@ -87,6 +90,8 @@ import { ContactIntiWebPageComponent } from './WebPageIntiwatana/contact.compone
 import { GalleryIntiWebPageComponent } from './WebPageIntiwatana/gallery.component';
 import { AboutusIntiWebPageComponent} from './WebPageIntiwatana/aboutus.component';
 import { FormContactComponent } from './WebPageIntiwatana/form-contact.component';
+import { VentanaModalComponent } from './WebPageIntiwatana/ventana-modal.component';
+
 
 
 @NgModule({
@@ -94,7 +99,7 @@ import { FormContactComponent } from './WebPageIntiwatana/form-contact.component
     AppComponent, HeaderPagesComponent, HeaderComponent, HabitacionesComponent, RoomsIntiWatanaWebPageComponent, AboutusIntiWebPageComponent, MachupicchuIntiWatanaWebPageComponent,
     TotalSeleccionHabPipe, TotalHabitacionesPipe, TotalHuepedesHabPipe, MonedaFormatoPipe, GalleryIntiWebPageComponent, HotelIntiWatanaWebPageComponent, Carousel2IntiWatanaWebPageComponent,
     CheckOutComponent, ProcessDialogComponent, DetalleOrdenComponent, DisponibilidadDialogComponent, ContactIntiWebPageComponent, CarouselIntiWatanaWebPageComponent,
-    HeaderIntiWatanaWebPageComponent, HomeIntiWatanaWebPageComponent, MotorIntiWatanaWebPageComponent, FooterIntiWatanaWebPageComponent, Carousel1IntiWatanaWebPageComponent, FormContactComponent
+    HeaderIntiWatanaWebPageComponent, HomeIntiWatanaWebPageComponent, MotorIntiWatanaWebPageComponent, FooterIntiWatanaWebPageComponent, Carousel1IntiWatanaWebPageComponent, FormContactComponent, VentanaModalComponent
   ],
   imports: [
     BrowserModule,
@@ -179,7 +184,10 @@ import { FormContactComponent } from './WebPageIntiwatana/form-contact.component
     PortalModule,
     ScrollingModule,
   ],
-  providers: [ DatePipe, HabitacionesRepository, CheckOutRepository, StoreFirstGuard, MatDialog, {provide: MAT_DATE_LOCALE, useValue: 'es-PE'} ],
+  providers: [ 
+    DatePipe, HabitacionesRepository, CheckOutRepository, StoreFirstGuard, MatDialog, {provide: MAT_DATE_LOCALE, useValue: 'es-PE'},
+    
+ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

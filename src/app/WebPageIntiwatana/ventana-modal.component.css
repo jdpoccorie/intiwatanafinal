@@ -1,0 +1,32 @@
+.cdk-overlay-pane.my-dialog {
+    position: relative!important;
+
+  }
+
+  .close {
+    background-color: red;
+  }
+
+  .close.mat-button {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    line-height: 14px;
+    min-width: auto;
+
+    width: 32px;
+    height: 32px;
+    background-color: red;
+    color: red;
+  }
+
+button.close {
+    width: 32px;
+    height: 32px;
+    background-color: red;
+    color: white;
+    border-radius: 100%;
+}
+

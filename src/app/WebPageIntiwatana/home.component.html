@@ -1,6 +1,8 @@
 <header-intiwatana-webpage (dataEvent)='setLanguage($event)'></header-intiwatana-webpage>
+
 <carousel-intiwatana-webpage></carousel-intiwatana-webpage>
-<section class="w-100 py-0">
+
+<section class="w-100 py-0" id="scroll">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 py-0 my-0">
@@ -175,7 +177,7 @@
               <div class="col-md-6 col-12 px-0 detalles text-center">
                 <p class="mb-0 text-marron">{{ 'home.contactanos_title' | translate }}:</p>
                 <small class="text-white font-weight-bold"><i class="fas fa-phone-square-alt"
-                    style="font-size: 20px; margin-right: 5px !important;"></i>084 244 884<br> <i
+                    style="font-size: 20px; margin-right: 5px !important;"></i>084 215 582<br> <i
                     class="fas fa-phone-square-alt" style="font-size: 20px; margin-right: 5px !important;"></i>985 868
                   713</small>
               </div>
@@ -245,8 +247,10 @@
       <div class="container px-5">
         <h2 class="text-center text-marron">{{ 'home.contactanos_title' | translate }}</h2>
         <p class="text-negro text-center font-weight-light">{{ 'home.escribenos' | translate }}</p>
+
         <div class="m-t-30">
-          <form class="widget-contact-form" novalidate action="include/contact-form.php" role="form" method="post">
+
+          <!-- <form class="widget-contact-form" novalidate action="include/contact-form.php" role="form" method="post">
             <div class="row">
               <div class="form-group col-md-6">
                 <label for="name">Nombre</label>
@@ -273,8 +277,29 @@
             </div>
             <button class="btn bg-naranja border-0" type="submit" id="form-submit"><i
                 class="fa fa-paper-plane"></i>&nbsp;{{ 'home.form_enviar' | translate }}</button>
-          </form>
-      </div>
+          </form>  -->
+      
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <button class="nav-link active w-50" id="nav-home-tab" data-toggle="tab" data-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Contacto Hotel Cusco</button>
+              
+              <button class="nav-link w-50" id="nav-profile-tab" data-toggle="tab" data-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Contacto Hotel Machu Picchu</button>
+        
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <!-- <div><h2>Formulario Cusco</h2></div> -->
+                <app-form-contact [hotel]="'hotel Cusco'"></app-form-contact>
+                
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <!-- <div><h2>Formulario Machupicchu</h2></div> -->
+                <app-form-contact [hotel]="'Hotel Mapi'"></app-form-contact>
+            </div>
+            
+          </div>
+        </div>
     </div>
     </div>
   </div>

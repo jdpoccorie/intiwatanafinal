@@ -1,38 +1,101 @@
 <div class="m-t-30 px-4">
     <!-- <form class="widget-contact-form" novalidate action="include/contact-form.php" role="form" method="post"> -->
-    <form class="widget-contact-form" novalidate role="form" [formGroup]="datos">
+    <form class="widget-contact-form" novalidate role="form" [formGroup]="datos" (submit)="this.hotel == 'Hotel Mapi' ? enviarCorreo(this.hotel):enviarCorreoCusco(this.hotel)">
         <div class="row">
             <div class="form-group col-md-6">
                 <label for="name">{{ 'home.form_nombre' | translate }}</label>
-                <input type="text" aria-required="true" name="widget-contact-form-name" required class="form-control required name" placeholder="Enter your Name" formControlName="name">
+                <input type="text" aria-required="true" name="widget-contact-form-name" required class="form-control required name" placeholder="Enter your Name" formControlName="NombreEmisor"
+                [class.is-invalid]="NombreEmisorNoValido"
+                >
+                <span *ngIf="NombreEmisorNoValido" class="text-danger">
+                    (El nombre no puede quedar vacío)*
+                </span>
             </div>
+            
             <div class="form-group col-md-6">
                 <label for="email">{{ 'home.form_email' | translate }}</label>
-                <input type="email" aria-required="true" name="widget-contact-form-email" required class="form-control required email" placeholder="Enter your Email" formControlName="email">
+                <input type="email" aria-required="true" name="widget-contact-form-email" required class="form-control required email" placeholder="Enter your Email" formControlName="CorreoEmisor" 
+                [class.is-invalid]="CorreoEmisorNoValido">
+
+                <span *ngIf="CorreoEmisorNoValido" class="text-danger">
+                    (Ingrese un correo válido)*
+                </span>
             </div>
         </div>
         <div class="row">
             <div class="form-group col-md-12">
                 <label for="subject">{{ 'home.form_asunto' | translate }}</label>
-                <input type="text" name="widget-contact-form-subject" required class="form-control required" placeholder="Subject..." formControlName="asunto">
+                <input type="text" name="widget-contact-form-subject" required class="form-control required" placeholder="Subject..." formControlName="OtrosDatos"
+                [class.is-invalid]="OtrosDatosNoValido"
+                >
+                <span *ngIf="OtrosDatosNoValido" class="text-danger">
+                    (El asunto no puede quedar vacío)*
+                </span>
             </div>
         </div>
+        
         <div class="form-group">
             <label for="message">{{ 'home.form_mensaje' | translate }}</label>
-            <textarea type="text" name="widget-contact-form-message" required rows="5" class="form-control required" placeholder="Enter your Message" formControlName="mensaje"></textarea>
+            <textarea type="text" name="widget-contact-form-message" required rows="5" class="form-control required" placeholder="Enter your Message" formControlName="CuerpoMensaje"
+            [class.is-invalid]="CuerpoMensajeNoValido"
+            ></textarea>
+            
+            <span *ngIf="CuerpoMensajeNoValido" class="text-danger">
+                (El nombre no puede quedar vacío)
+            </span>
         </div>
 
-        <div class="form-group">
-            <div style="width: 100%;" *ngIf="showLoadingSpinner == true">
-                <mat-spinner mode="indeterminate" *ngIf="showLoadingSpinner == true" [diameter]="40"></mat-spinner>
-              </div>
-              <div style="width: 100%;" *ngIf="showLoadingSpinner == false">
-                <img [src]="capcha64" class="bmd-img" />
-              </div>
-            <button (click)="this.refreshCaptcha()">refresh</button>
-            <input type="text" name="widget-contact-form-subject" required class="form-control required" placeholder="Captcha...">
+
+        <div class="row">
+            <div class="form-group col-xl-3 col-lg-4 col-md-5">
+                <label for="message">Captcha</label>
+                <div class="d-flex">
+                    <button class="btn-refresh" (click)=" this.hotel == 'Hotel Mapi' ?this.refreshCaptcha():this.refreshCaptchaCusco()"><i class="fa fa-refresh fa-2xl" aria-hidden="true"></i></button>
+                    <div class="form-group d-block">
+                        <div style="width: 100%;" *ngIf="showLoadingSpinner == true">
+                            <mat-spinner mode="indeterminate" *ngIf="showLoadingSpinner == true" [diameter]="40"></mat-spinner>
+                        </div>
+
+
+                        <div style="width: 100%;" *ngIf="showLoadingSpinner == false">
+                            <img [src]="(this.hotel == 'Hotel Mapi')? capcha64:capcha64Cusco" class="bmd-img" />
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            
+            <div class="form-group col-xl-9 col-lg-8 col-md-7">
+                <label for="message" class="d-none d-sm-none d-md-block">Ingrese Captcha</label>
+                <input type="text" name="widget-contact-form-subject" required class="form-control required" placeholder="Captcha..." formControlName="CodigoCaptcha"
+                [class.is-invalid]="CodigoCaptchaNoValido"
+                >
+                <span *ngIf="CodigoCaptchaNoValido" class="text-danger">
+                    (El Código Captcha no puede quedar vacío)
+                </span>
+                
+            </div>
         </div>
 
-        <button class="boton-1" type="button" id="form-submit"><i class="fa fa-paper-plane" (click)="mostrarMensaje(this.hotel)"></i>&nbsp;{{ 'home.form_enviar' | translate }}</button>
+        <!-- *ngIf="EnvioSuccess"  -->
+        <div *ngIf="EnvioSuccess" class="alert alert-success fade show d-fex align-items-center justify-content-around" role="alert" data-mdb-toggle="animation" data-mdb-animation-reset="true" data-mdb-animation=" "data-mdb-animation="fade-out">
+            <strong>Envío de correo exitoso!</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="this.EnvioSuccess=false">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div *ngIf="EnvioFailed" class="alert alert-danger fade show" role="alert" data-mdb-toggle="animation" data-mdb-animation-reset="true" data-mdb-animation="fade-out">
+            <strong>Error en el Código Captcha</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="this.EnvioFailed=false">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <button class="boton-1" type="submit" id="form-submit">
+            <i class="fa fa-paper-plane"></i> &nbsp;{{ 'home.form_enviar' | translate }}
+        </button>
     </form>
 </div>
+
+<hr>

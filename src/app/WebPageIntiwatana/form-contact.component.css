@@ -41,11 +41,10 @@
     border-top-right-radius: 0.25rem;
   }
   @media  (max-width:760px) {
-    .boton-1{
-    width: 100%;
+    .boton-1 {
+        width: 100%;
     }
   }
-
 
   .lds-ripple {
     display: inline-block;
@@ -62,6 +61,14 @@
   }
   .lds-ripple div:nth-child(2) {
     animation-delay: -0.5s;
+  }
+
+  .btn-refresh {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: 2px solid rgb(157, 157, 157);
+    border-radius: 3px;
   }
   @keyframes lds-ripple {
     0% {

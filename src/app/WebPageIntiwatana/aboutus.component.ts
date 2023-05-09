@@ -12,6 +12,13 @@ export class AboutusIntiWebPageComponent {
 
     }
 
+    ngOnInit() {
+        document.getElementById('scroll').scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+
     setLanguage(lang: string){
         this.translate.use(lang);
     }
